@@ -5,3 +5,9 @@ border:1px solid;
 margin:5px;
 padding:5px;
 }
+
+h2[data-bs-toggle^="collapse"]:before{
+display:inline-block;
+margin-right:2px;
+content:'▼';
+}
