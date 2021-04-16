@@ -6,7 +6,7 @@ margin:5px;
 padding:5px;
 }
 
-h2[data-bs-toggle^="collapse"]:before{
+h5[data-bs-toggle^="collapse"]:after{
 display:inline-block;
 margin-right:2px;
 content:'▼';
