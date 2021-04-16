@@ -1,6 +1,9 @@
-# あいしーゆーの空き部屋をなんとなく探すやつ
-[現物](https://say-lily.github.io/icu-akibeya/)
+# ICU Honkan Open Classroom Finder
+[現物](https://openclassrooms.icu)
 ## 説明
-- AY2021Sに割り当てられた授業のない教室を探せるかもしれないし、間違っているかもしれない、そんな1ページの代物を公開するためのrepo
-- もし大学に怒られたら削除します
-- 改善したい人はどうぞ
+
+このプロジェクトはSayさん([@Say_lillie](https://twitter.com/say_lillie))の作り上げたgithub.com/say-lily/[あいしーゆーの空き部屋をなんとなく探すやつ](https://github.com/say-lily/icu-akibeya)をベースにしています。というか9割Sayさんです。Sayさんしゅごい。
+  
+本館の空き教室がどこなのか、時間を選択すると表示されます。
+
+本サイトについての問い合わせはTwitter(@PENTACoXIAN)にDMをお願いします。
