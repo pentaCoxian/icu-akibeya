@@ -1,13 +1,12 @@
-.classroom{
-width:100px;height:50px;
-line-height:40px;
-border:1px solid;
-margin:5px;
-padding:5px;
+.classroom {
+    width: 100px;
+    height: 50px;
+    line-height: 40px;
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
 }
 
-h5[data-bs-toggle^="collapse"]:after{
-display:inline-block;
-margin-right:2px;
-content:'▼';
+h5[data-bs-toggle^="collapse"]:after {
+    margin-right: 2px;
 }

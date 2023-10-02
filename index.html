@@ -6,6 +6,20 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            theme: {
+                extend: {
+                    colors: {
+                        'icu': '#005ABB',
+                        'bkgnd': '#1815A7'
+                    }
+                }
+            }
+        }
+    </script>
     <title>あいしーゆー空き部屋</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -23,318 +37,466 @@
 </head>
 
 <body>
-    <div class="h1 text-center">
-        Honkan Open Classrooms (2022A)
-    </div>
-    <div class="container">
-        <div class="container alert alert-success" role="alert">
-            <div class="">
-                2022.12.12: Page has been updated for 2022 Winter open classrooms / 2022年度冬学期に対応しました。<br>
+    <div class="tw-flex tw-flex-col">
+        <div class="tw-flex tw-flex-row tw-border-black tw-mb-4 tw-border-b-2">
+            <div class="tw-ml-5 tw-my-auto tw-text-xl tw-md:text-2xl tw-font-semilight tw-underline ">
+                <div class="tw-bg-black tw-text-white tw-p-1">openclassrooms.icu</div>
             </div>
+            <div class="tw-flex tw-ml-5 tw-text-lg tw-my-4 tw-font-semibold tw-leading-4">Made<br>By<br>Pentacoxian</div>
+
         </div>
-    </div>
-    <div class="filters container">
-        <div class="row">
-            <div class="filter my-1 mx-auto p-auto col border">
-                Mon
-            </div>
-            <div class="filter my-1 mx-auto p-auto col border">
-                Tue
-            </div>
-            <div class="filter my-1 mx-auto p-auto col border">
-                Wed
-            </div>
-            <div class="filter my-1 mx-auto p-auto col border">
-                Thu
-            </div>
-            <div class="filter my-1 mx-auto p-auto col border">
-                Fri
-            </div>
-            <div class="filter my-1 mx-auto p-auto col border">
-                Sat
-            </div>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".tu1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".w1">1</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".f1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".sa1">1</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".tu2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".w2">2</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".f2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".sa2">2</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".tu3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".w3">3</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".f3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".sa3">3</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".tu4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".w4">Lu</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".f4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".sa4">Lu</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m5">4</button> <button class="filter m-1 col btn btn-light" data-filter=".tu5">4</button> <button class="filter m-1 col btn btn-light" data-filter=".w5">4</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th5">4</button> <button class="filter m-1 col btn btn-light" data-filter=".f5">4</button> <button class="filter m-1 col btn btn-light" data-filter=".sa5">4</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m6">5</button> <button class="filter m-1 col btn btn-light" data-filter=".tu6">5</button> <button class="filter m-1 col btn btn-light" data-filter=".w6">5</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th6">5</button> <button class="filter m-1 col btn btn-light" data-filter=".f6">5</button> <button class="filter m-1 col btn btn-light" data-filter=".sa6">5</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m7">6</button> <button class="filter m-1 col btn btn-light" data-filter=".tu7">6</button> <button class="filter m-1 col btn btn-light" data-filter=".w7">6</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th7">6</button> <button class="filter m-1 col btn btn-light" data-filter=".f7">6</button> <button class="filter m-1 col btn btn-light" data-filter=".sa7">6</button>
-        </div>
-        <div class="row">
-            <button class="filter m-1 col btn btn-light" data-filter=".m8">7</button> <button class="filter m-1 col btn btn-light" data-filter=".tu8">7</button> <button class="filter m-1 col btn btn-light" data-filter=".w8">7</button> <button class="filter m-1 col btn btn-light"
-                data-filter=".th8">7</button> <button class="filter m-1 col btn btn-light" data-filter=".f8">7</button> <button class="filter m-1 col btn btn-light" data-filter=".sa8">7</button>
-        </div>
-        <div class="row">
-            <button class="col btn btn-warning isotope-reset" data-filter="*">RESET / 初期化</button>
-        </div>
-    </div>
-    <div class="container border p-3 my-2">
-        <!-- Default all : m1 m2 m3 ml m4 m5 m6 m7 tu1 tu2 tu3 tul tu4 tu5 tu6 tu7 w1 w2 w3 wl w4 w5 w6 w7 th1 th2 th3 thl th4 th5 th6 th7 f1 f2 f3 fl f4 f5 f6 f7 sa1 sa2 sa3 sal sa4 sa5 sa6 sa7-->
-        <div class="h2">
-            1F
-        </div>
-        <div class="grid-1F">
-            <!--1F Right wing-->
-            <div class="classroom m1 m2 m4 m5 tu4 tu5 tu6 tu7 tu8 w1 w2 w4 w5 w8 th4 th5 th6 th7 th8 f4 f5 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-102
-            </div>
-            <div class="classroom m1 m3 m4 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w6 w7 w8 th2 th3 th4 th5 th6 th7 th8 f1 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-103A
-            </div>
-            <div class="classroom m1 m3 m4 m6 m7 m8 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w6 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-103B
-            </div>
-            <div class="classroom m1 m4 m5 m8 tu1 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w5 w8 th1 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-104
-            </div>
-            <div class="classroom m1 m3 m4 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-105A
-            </div>
-            <div class="classroom m1 m3 m4 m5 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w5 w6 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-105B
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m8 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w8 th1 th2 th3 th4 th7 th8 f3 f4 f5 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-106
-            </div>
-            <div class="classroom m3 m4 m5 tu3 tu4 tu5 tu7 tu8 w3 w4 th1 th4 th5 f3 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-107
-            </div>
-            <div class="classroom m3 m4 m5 tu3 tu4 tu5 tu7 tu8 w3 w4 th1 th2 th3 th4 th5 f3 f4 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-108
-            </div>
-            <div class="classroom m4 m5 tu7 tu8 w4 th1 f3 f4 sa1 sa4 sa5 sa6 sa7 sa8 ">
-                H-115
-            </div>
-            <div class="classroom m1 m2 m4 m6 m7 m8 tu4 tu5 w1 w2 w4 th1 th4 th5 th6 th7 th8 f1 f2 f4 f6 f7 f8 sa4 sa5 sa6 sa7 sa8 ">
-                H-116
-            </div>
-            <!--1F Left wing-->
-            <div class="classroom m3 m4 tu7 tu8 w4 w8 th1 th8 f4 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-151
-            </div>
-            <div class="classroom m1 m2 m4 w1 w2 w4 w6 th1 th2 f1 f2 f4 f6 f7 f8 sa4 sa5 sa6 sa7 sa8 ">
-                H-152
-            </div>
-            <div class="classroom m4 m5 tu4 tu7 tu8 w4 w8 th1 th4 th5 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-155
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu4 tu7 tu8 w3 w4 w8 th1 th4 th5 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-157
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu4 tu5 w3 w4 w7 w8 th1 th4 th5 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-159
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu3 w3 w4 w7 w8 th1 th2 th3 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-160
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu3 tu4 tu5 w3 w4 th1 th2 th3 th4 th5 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-167
-            </div>
-            <div class="classroom m1 m2 m3 m4 m8 tu3 w1 w2 w3 w4 w8 th8 f1 f2 f3 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-168
-            </div>
-            <div class="classroom m1 m2 m4 m8 tu1 tu2 tu3 tu4 tu5 w1 w2 w4 w8 th1 th4 th5 th6 th7 th8 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-170
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu3 tu4 tu5 tu7 tu8 w3 w4 w8 th1 th2 th3 th4 th5 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-172
-            </div>
-        </div>
-        <h5 aria-controls="h-1f-map" aria-expanded="false" class="pt-2" data-bs-toggle="collapse" href="#h-1f-map" role="button">Map</h5>
-        <div class="collapse" id="h-1f-map"><img alt="本館一階" class="img-fluid p-2" src="images/honkan1F.png"></div>
-    </div>
-    <div class="container border p-3 my-2">
-        <div class="h2">
-            2F
-        </div>
-        <div class="grid-2F">
-            <!--2F Right wing-->
-            <div class="classroom m3 m4 m5 m8 tu1 tu3 tu4 tu5 w3 w4 w7 w8 th1 th2 th3 th4 th5 f1 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-201
-            </div>
-            <div class="classroom m3 m4 m7 m8 tu3 tu4 w2 w3 w4 w7 w8 th1 th2 th3 th4 th5 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-202
-            </div>
-            <div class="classroom m1 m4 m5 m8 tu6 tu7 tu8 w1 w4 w5 w6 w7 w8 f1 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-203
-            </div>
-            <div class="classroom m2 m3 m4 m5 m8 tu1 tu2 tu3 tu6 tu7 tu8 w2 w3 w4 w5 w8 th1 th6 th7 th8 f1 f2 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-204
-            </div>
-            <div class="classroom m1 m4 m7 m8 tu3 tu4 w1 w4 w7 w8 th1 th2 th3 th4 th5 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-205
-            </div>
-            <div class="classroom m1 m2 m4 m5 tu4 tu5 w1 w2 w4 w5 w6 w7 w8 th1 th4 th5 th6 th7 th8 f1 f2 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-213
-            </div>
-            <div class="classroom m4 m7 m8 tu3 tu4 tu8 w4 w7 w8 th1 th2 th3 th4 th5 th8 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-214
-            </div>
-            <div class="classroom m1 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w5 w6 w7 w8 th1 th2 th3 th4 th5 th8 f1 f4 f5 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-215
-            </div>
-            <!--2F Left wing-->
-            <div class="classroom m1 m3 m4 m5 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w5 th4 th5 th6 th7 th8 f1 f3 f4 f5 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-251
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m8 tu6 tu7 tu8 w1 w2 w3 w4 w8 th1 th6 th7 th8 f1 f3 f4 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-252
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-253
-            </div>
-            <div class="classroom m1 m4 m5 m6 m7 m8 tu1 tu2 tu4 tu5 w1 w4 w5 w6 w7 w8 th1 th4 th5 th6 th7 th8 f1 f2 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-260
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-262
-            </div>
-            <div class="classroom m1 m2 m3 m4 m7 m8 tu1 tu3 tu4 tu7 tu8 w3 w4 w7 w8 th1 th2 th3 th4 th5 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-265
-            </div>
-        </div>
-        <h5 aria-controls="h-2f-map" aria-expanded="false" class="pt-2" data-bs-toggle="collapse" href="#h-2f-map" role="button">Map</h5>
-        <div class="collapse" id="h-2f-map"><img alt="本館二階" class="img-fluid p-2" src="images/honkan2F.png"></div>
-    </div>
-    <div class="container border p-3 my-2">
-        <div class="h2">
-            3F
-        </div>
-        <div class="grid-3F">
-            <!--3F Right wing-->
-            <div class="classroom m1 m4 m7 m8 tu1 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w7 w8 th1 th2 th3 th4 th5 th6 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-301
-            </div>
-            <div class="classroom m1 m4 m7 m8 tu1 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w7 w8 th1 th2 th3 th4 th5 th8 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-302
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w6 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-303
-            </div>
-            <div class="classroom m1 m3 m4 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w6 w7 w8 th1 th4 th5 th6 th7 th8 f1 f3 f4 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-304
-            </div>
-            <div class="classroom m4 m7 m8 tu1 tu3 tu4 tu6 tu7 tu8 w2 w4 w7 w8 th1 th2 th3 th4 th5 th8 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-307
-            </div>
-            <div class="classroom m4 m7 m8 tu1 tu3 tu4 tu6 tu7 tu8 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-309
-            </div>
-            <div class="classroom m1 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w5 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f5 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-314
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w6 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-315
-            </div>
-            <div class="classroom m1 m2 m3 m4 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-316
-            </div>
-            <!--3F Left wing-->
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-351
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-352
-            </div>
-            <div class="classroom m4 m7 m8 tu1 tu3 tu4 tu6 tu7 tu8 w2 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-353
-            </div>
-            <div class="classroom m1 m4 m7 m8 tu1 tu3 tu4 tu6 tu7 tu8 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-355
-            </div>
-            <div class="classroom m1 m4 m7 m8 tu1 tu3 tu4 tu6 tu7 tu8 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-356
-            </div>
-            <div class="classroom m1 m4 m5 tu1 tu3 tu4 tu6 tu7 tu8 w1 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-357
-            </div>
-            <div class="classroom m1 m4 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f4 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-359
-            </div>
-            <div class="classroom m1 m3 m4 m7 m8 tu3 tu4 tu5 tu6 tu7 tu8 w1 w3 w4 w5 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-361
-            </div>
-            <div class="classroom ">
-                H-362
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w6 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-364
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 m6 m7 m8 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w5 w6 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f2 f3 f4 f5 f6 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-367
-            </div>
-            <div class="classroom m1 m2 m3 m4 m5 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w7 w8 th2 th3 th4 th5 th6 th7 th8 f1 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-369
-            </div>
-        </div>
-        <h5 aria-controls="h-3f-map" aria-expanded="false" class="pt-2" data-bs-toggle="collapse" href="#h-3f-map" role="button">Map</h5>
-        <div class="collapse" id="h-3f-map"><img alt="本館三階" class="img-fluid p-2" src="images/honkan3F.png"></div>
-    </div>
-    <div class="container border p-3 my-2">
-        <div class="h2">
-            4F
-        </div>
-        <div class="grid-4F">
-            <!--4F-->
-            <div class="classroom m1 m4 tu1 tu2 tu3 tu4 tu5 tu6 tu7 tu8 w1 w4 w6 w7 w8 th1 th2 th3 th4 th5 f1 f4 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-402
-            </div>
-            <div class="classroom m1 m2 m3 m4 m8 tu1 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-404
-            </div>
-            <div class="classroom m1 m2 m3 m4 m6 m7 m8 tu1 tu3 tu4 tu5 tu6 tu7 tu8 w1 w2 w3 w4 w7 w8 th1 th2 th3 th4 th5 th6 th7 th8 f1 f3 f4 f7 f8 sa1 sa2 sa3 sa4 sa5 sa6 sa7 sa8 ">
-                H-405
-            </div>
-        </div>
-        <h5 aria-controls="h-4f-map" aria-expanded="false" class="pt-2" data-bs-toggle="collapse" href="#h-4f-map" role="button">Map</h5>
-        <div class="collapse" id="h-4f-map"><img alt="本館四階" class="img-fluid p-2" src="images/honkan4F.png"></div>
-    </div>
-    <div class="container">
-        <h5 aria-controls="I-map" aria-expanded="false" class="pt-2" data-bs-toggle="collapse" href="#I-map" role="button">ILC Map(作成途中)</h5>
-        <div class="container collapse fluid" id="I-map">
-            <div class=".d-flex"><img alt="ILC1階" class="img-fluid p-2 w-25" src="images/ilc1f.png"></div>
-            <div class=".d-flex"><img alt="ILC2階" class="img-fluid p-2 w-25" src="images/ilc2f.png"></div>
-        </div>
-    </div>
-    <div class="container">
-        <h3 class="pt-2">#Readme</h3>
-        <div>
-            <div>
-                <ul>
-                    <li>このプロジェクトはSayさん(<a href="https://twitter.com/say_lillie">@Say_lillie</a>)の<a href="https://github.com/say-lily/icu-akibeya">あいしーゆーの空き部屋をなんとなく探すやつ</a>をベースにしています。
-                    </li>
-                    <li>フィードバック、質問などありましたらTwitterでDMをお願いします(<a href="https://twitter.com/pentacoxian">@PENTACoXIAN</a>)
-                    </li>
-                    <li>このページのソースコードは<a href="https://github.com/pentaCoxian/icu-akibeya">こちら</a>。
-                    </li>
-                    <li>2022/09/02に取得した「<a href="https://docs.google.com/spreadsheets/d/1wE6ZnJ1-TYvHfP7faNHPlKgDovHi8mGf/edit#gid=388337653">割り当てがない教室</a>」情報です、元のデータがあまりアップデートされていないようなので正確性や管理状況、実際に使えるかどうかの保証はできません。(何カ所かすでに表記と違ったので…)
-                    </li>
-                    <li>例のごとく半分寝ながらの実装なので抜け漏れ等あるかもしれないです。 報告していただけたら修正頑張ります。</li>
-                    <li>緊急事態宣言などにより変動等あるかもしれないので公式発表の確認もお願いします。(2022/09/02)</li>
-                </ul>
-            </div>
+        <div class="tw-mb-16">
+            <div class="filters container">
+                <div class="row">
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Mon
+                    </div>
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Tue
+                    </div>
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Wed
+                    </div>
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Thu
+                    </div>
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Fri
+                    </div>
+                    <div class="filter my-1 mx-auto p-auto col border">
+                        Sat
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".tu1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".w1">1</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".f1">1</button> <button class="filter m-1 col btn btn-light" data-filter=".sa1">1</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".tu2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".w2">2</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".f2">2</button> <button class="filter m-1 col btn btn-light" data-filter=".sa2">2</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".tu3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".w3">3</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".f3">3</button> <button class="filter m-1 col btn btn-light" data-filter=".sa3">3</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".ml4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".tul4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".wl4">Lu</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".thl4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".fl4">Lu</button> <button class="filter m-1 col btn btn-light" data-filter=".sal4">Lu</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m4">4</button> <button class="filter m-1 col btn btn-light" data-filter=".tu4">4</button> <button class="filter m-1 col btn btn-light" data-filter=".w4">4</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th4">4</button> <button class="filter m-1 col btn btn-light" data-filter=".f4">4</button> <button class="filter m-1 col btn btn-light" data-filter=".sa4">4</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m5">5</button> <button class="filter m-1 col btn btn-light" data-filter=".tu5">5</button> <button class="filter m-1 col btn btn-light" data-filter=".w5">5</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th5">5</button> <button class="filter m-1 col btn btn-light" data-filter=".f5">5</button> <button class="filter m-1 col btn btn-light" data-filter=".sa5">5</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m6">6</button> <button class="filter m-1 col btn btn-light" data-filter=".tu6">6</button> <button class="filter m-1 col btn btn-light" data-filter=".w6">6</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th6">6</button> <button class="filter m-1 col btn btn-light" data-filter=".f6">6</button> <button class="filter m-1 col btn btn-light" data-filter=".sa6">6</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m7">7</button> <button class="filter m-1 col btn btn-light" data-filter=".tu7">7</button> <button class="filter m-1 col btn btn-light" data-filter=".w7">7</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th7">7</button> <button class="filter m-1 col btn btn-light" data-filter=".f7">7</button> <button class="filter m-1 col btn btn-light" data-filter=".sa7">7</button>
+                </div>
+                <div class="row">
+                    <button class="filter m-1 col btn btn-light" data-filter=".m8">8</button> <button class="filter m-1 col btn btn-light" data-filter=".tu8">8</button> <button class="filter m-1 col btn btn-light" data-filter=".w8">8</button>
+                    <button class="filter m-1 col btn btn-light" data-filter=".th8">8</button> <button class="filter m-1 col btn btn-light" data-filter=".f8">8</button> <button class="filter m-1 col btn btn-light" data-filter=".sa8">8</button>
+                </div>
+                <div class="row">
+                    <button class="col btn btn-warning isotope-reset tw-mx-2 tw-mt-2" data-filter="*">RESET / 初期化</button>
+                </div>
+            </div>
+            <div class="container border p-3 my-2">
+                <!-- Default all : m1 m2 m3 ml m4 m5 m6 m7 tu1 tu2 tu3 tul tu4 tu5 tu6 tu7 w1 w2 w3 wl w4 w5 w6 w7 th1 th2 th3 thl th4 th5 th6 th7 f1 f2 f3 fl f4 f5 f6 f7 sa1 sa2 sa3 sal sa4 sa5 sa6 sa7-->
+                <div class="h2">
+                    Honkan 1F
+                </div>
+                <div class="grid-1F">
+                    <div class="classroom tu2 th2 m2 w2 m3 f3 f7 f8 m5 m6 m7 th5 th6 th7 w5 w6 w7 f1 m4 w4 f4 sa1 sa2 sa3 tu3 th3 tu5 tu6 f5 f6 m1 m2 w1 f1 f2 th2 th3 m5 m6 tu5 tu6 tu7 tu1 tu2 th1 tu4 tul4 th4 thl4 w5 w6 ">
+                        H-102
+                    </div>
+                    <div class="classroom th6 th7 m2 w2 f2 m8 f5 f6 f7 m2 w2 f2 m3 w3 ">
+                        H-103A
+                    </div>
+                    <div class="classroom m3 w3 f3 th5 th6 w5 w6 w7 m5 m6 m7 tu1 tu2 th1 f5 f6 f7 ">
+                        H-103B
+                    </div>
+                    <div class="classroom m5 m6 m7 f5 f6 tu1 tu2 th1 m4 w4 f4 tu3 th2 th3 th5 th6 m3 w3 f3 tu4 tu5 w5 w6 m1 m2 w1 f1 f2 m4 w4 f4 m5 m6 m3 w3 f3 tu1 tu2 tu3 th2 th3 w5 w6 w7 tu4 th4 ">
+                        H-104
+                    </div>
+                    <div class="classroom tu1 tu2 tu3 th2 th3 m3 w3 w4 w5 f5 f6 f7 m3 w3 tu3 th3 th1 th2 ">
+                        H-105A
+                    </div>
+                    <div class="classroom m3 w3 w5 w6 m5 m6 f5 f6 f7 ">
+                        H-105B
+                    </div>
+                    <div class="classroom tu5 tu6 tu1 tu2 m2 w2 f2 m5 m6 m7 tu3 th2 th3 f4 f5 th5 th6 m1 m2 w1 f1 f2 tu1 tu2 f5 f6 f7 m3 w3 f3 th4 th5 sa5 sa6 sa7 tu3 th3 w5 w6 ">
+                        H-106
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 m5 th5 th6 th7 th8 th2 th3 tu5 tu6 tu7 w4 w5 m1 m2 f1 f2 m5 m6 w5 w6 f5 f6 m4 w4 f4 tu5 tu6 tu7 th5 th6 th7 f7 f8 m3 w3 tu3 th3 tu5 w3 ">
+                        H-107
+                    </div>
+                    <div class="classroom m5 m1 m2 w1 f1 f2 th2 th3 f5 f6 f7 tu4 th4 m1 m2 f1 f2 m5 m6 w5 w6 f5 f6 tu1 tu2 tu3 th1 th2 th3 tu5 tu6 tu7 th5 th6 th7 tu5 w3 ">
+                        H-108
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 m5 f5 f6 sa2 sa3 tu3 th3 th5 th6 tu5 tu6 tu7 m1 m2 w1 f1 f2 m5 m6 m7 w5 w6 w7 tu7 tu8 tu2 th2 f5 f6 m4 w4 f4 sa2 sa3 tu3 th3 tu4 tu5 th4 th5 th6 th7 w3 ">
+                        H-115
+                    </div>
+                    <div class="classroom tu3 th2 th3 m3 w3 f3 th5 th6 th7 tu4 tul4 th4 thl4 w1 f1 m6 w6 f6 m4 m5 tu4 tul4 th4 thl4 tu7 tu8 sa1 sa2 tu1 tu2 th1 ">
+                        H-116
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 m4 m5 f4 f5 tu3 th2 th3 th5 th6 th7 m3 w3 sa1 sa2 sa3 tu4 tul4 th4 thl4 tu5 tu6 tu7 m1 m2 tu1 tu2 w1 w2 f1 f2 tu5 tu6 tu7 th5 th6 th7 m5 m6 m7 tu4 tul4 th4 thl4 f6 f7 w6 w7 w6 w4 f5 f4 ">
+                        H-151
+                    </div>
+                    <div class="classroom tu4 tul4 th4 thl4 tu3 th2 th3 tu5 tu6 tu7 m3 w3 m5 m6 m7 m2 w2 f2 m4 w4 f4 f5 f6 f7 tu1 tu2 th1 th5 th6 th7 m1 m2 tu1 tu2 w1 w2 f1 f2 tu4 tul4 th4 thl4 tu5 tu6 w5 w6 w7 tu3 th2 th3 m3 w3 f3 m4 w4 f4 f5 f6 f7 m5 m6 m7 sa1 sa2 sa3 tu4 tul4 th4 thl4 ">
+                        H-152
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 tu4 tu3 th2 th3 tu5 tu6 tu7 m1 m2 tu1 tu2 w1 w2 f1 f2 m5 m6 th5 th6 w3 f3 tu4 tul4 th4 thl4 tu5 tu6 tu7 tu3 th2 th3 f6 f7 f5 f6 w4 w5 ">
+                        H-155
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 tu4 th5 th6 th7 m3 w3 f3 tu3 th3 m1 m2 tu1 tu2 w1 w2 f1 f2 tu5 tu6 m5 m6 m7 f6 f7 f5 f4 w4 w5 tu4 ">
+                        H-157
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 m1 m2 tu1 tu2 w1 w2 f1 f2 tu5 tu6 tu3 th2 th3 th5 th6 th7 m3 w3 f3 m5 w6 w5 m6 f4 f5 tu4 ">
+                        H-159
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 tu5 tu6 th4 th5 th6 th7 m2 w2 m3 w3 f3 tu3 th2 th3 f5 w6 m6 f3 m5 f6 w5 tu3 tu4 ">
+                        H-160
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 tu3 th2 th3 th5 th6 th7 th5 th6 th7 m2 w2 tu5 f3 m6 tu3 m5 w5 f5 f4 w5 ">
+                        H-167
+                    </div>
+                    <div class="classroom m1 m2 w1 f1 f2 tu4 tul4 th4 thl4 f5 f6 f7 tu5 tu6 tu2 th2 m5 m6 m7 th5 th6 th7 m4 w4 f4 m1 m2 tu1 tu2 w1 w2 f1 f2 tu4 tul4 th4 thl4 tu5 tu6 tu7 m5 m6 m7 m4 w4 f4 tu3 th2 th3 f5 f6 f7 ">
+                        H-168
+                    </div>
+                    <div class="classroom m3 w3 f3 tu3 th2 th3 tu1 tu2 th5 th6 th7 tu5 tu6 tu7 m5 m6 m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 tu5 th2 th3 m6 w6 f5 f6 f7 tu4 tul4 th4 thl4 w4 w5 m4 m5 ">
+                        H-170
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 f1 f2 m5 m6 w5 w6 f5 f6 tu4 tul4 th4 thl4 m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 tu5 tu6 tu7 th5 th6 th7 m5 m6 m7 f5 f6 f7 w5 w6 w7 tu4 th4 ">
+                        H-172
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <h5 aria-controls="h-1f-map" aria-expanded="false" class="tw-p-1 tw-px-4 tw-text-base tw-m-1 tw-mr-2 tw-w-fit tw-mt-4 tw-text-white tw-bg-black tw-border tw-border-black" data-bs-toggle="collapse" href="#h-1f-map" role="button">Quick Map ▼</h5>
+                    <div class="collapse" id="h-1f-map"><img alt="本館一階" class="p-2" src="images/honkan1F.png"></div>
+                    <a href="https://icumap.com/map/honkan" class="tw-p-1 tw-px-4 tw-m-1 tw-mr-4 tw-w-fit tw-text-base tw-mt-1 tw-text-white tw-bg-black tw-border tw-border-black">ICUmap.com</a>
+                </div>
+            </div>
+            <div class="container border p-3 my-2">
+                <div class="h2">
+                    Honkan 2F
+                </div>
+                <div class="grid-2F">
+                    <div class="classroom m1 m2 f1 f2 tu5 tu6 tu7 th5 th6 th7 f5 f6 tu5 tu6 tu7 th5 th6 th7 tu3 w2 tu2 m6 w3 m5 f2 w5 f4 f5 w4 f3 m3 w3 ">
+                        H-201
+                    </div>
+                    <div class="classroom m1 m2 f1 f2 tu5 tu6 tu7 th5 th6 th7 th2 th3 tu6 tu7 th5 th6 th7 f3 f2 tu5 w3 m3 w2 m6 m5 tu3 tu2 f4 f5 w4 w5 m3 w3 f3 ">
+                        H-202
+                    </div>
+                    <div class="classroom m5 m6 tu3 th3 m3 w3 f3 f5 f6 f7 tu5 tu6 w2 f2 tu3 th3 tu4 tul4 th4 thl4 w5 m5 m6 w6 tu5 tu6 ">
+                        H-203
+                    </div>
+                    <div class="classroom tu3 th3 tu1 tu2 m3 w3 f3 th5 th6 th7 m2 w2 f2 w5 w6 w7 f5 f6 f7 tu5 tu6 m5 m6 m7 m3 w3 f3 th5 th6 m4 w4 m2 w2 f2 w5 w6 w7 tu4 tul4 th4 thl4 f5 f6 f7 m5 m6 ">
+                        H-204
+                    </div>
+                    <div class="classroom tu5 tu6 tu7 th5 th6 th7 m1 w1 tu5 tu6 tu7 th2 th5 th6 w2 tu2 m6 w3 w5 m5 tu3 f3 m2 f2 m3 f5 m3 tu4 w3 f3 ">
+                        H-205
+                    </div>
+                    <div class="classroom m5 m6 m7 tu1 tu2 th1 tu3 th2 th3 tu4 tul4 th4 thl4 m4 w4 f4 tu4 tul4 th4 thl4 tu3 th2 th3 m3 w3 f3 m4 w4 f4 m2 w2 f2 m5 m6 m7 m3 w3 f3 ">
+                        H-213
+                    </div>
+                    <div class="classroom tu5 tu6 tu7 th2 th3 m6 f5 w2 tu2 tu3 f6 w3 m5 f2 f3 w5 w5 m3 w3 f3 ">
+                        H-214
+                    </div>
+                    <div class="classroom tu3 th2 th3 tu1 tu2 th1 m5 m6 m7 f4 f5 tu1 tu2 th1 tu4 tul4 th4 thl4 m2 w2 f2 m5 m6 th2 th3 ">
+                        H-215
+                    </div>
+                    <div class="classroom m5 m6 w5 w6 f5 f6 m4 w4 f4 tu1 tu2 tu3 th1 th2 th3 m3 w3 f3 m2 w2 f2 th5 th6 m2 w2 sa1 sa2 sa3 m6 m7 f6 f7 f2 f3 tu4 tul4 th4 thl4 ">
+                        H-251
+                    </div>
+                    <div class="classroom m5 m6 w5 w6 f5 f6 m4 w4 f4 tu5 tu6 tu7 th5 th6 th7 tu1 tu2 tu3 th1 th2 th3 m2 w2 f2 m3 w3 f3 tu4 tul4 th4 thl4 f6 f7 m2 w2 m3 w3 f3 m5 m6 m7 w5 w6 f4 f5 f3 ">
+                        H-252
+                    </div>
+                    <div class="classroom tu5 tu3 th2 th3 tu1 tu2 m5 m6 m2 w2 f2 f5 f6 f7 m3 w3 f3 w5 w6 w7 m4 m5 tu1 tu2 th1 m3 f3 tu3 th2 th3 w5 w6 tu4 tul4 th4 thl4 ">
+                        H-253
+                    </div>
+                    <div class="classroom tu3 th2 th3 m5 m6 w5 w6 f5 f6 th5 th6 th7 tu1 tu2 th1 m3 w3 f3 tu3 th2 th3 f5 f6 f7 tu1 tu2 th1 m2 w2 f2 ">
+                        H-260
+                    </div>
+                    <div class="classroom m3 w3 f3 tu3 th2 th3 th5 th6 th7 th8 tu4 tul4 th4 thl4 w5 w6 w7 m1 w1 f1 tu1 tu2 th1 f5 f6 f7 tu3 th2 th3 tu1 tu2 th1 tu4 tul4 th4 thl4 m3 w3 f3 m4 w4 f4 ">
+                        H-262
+                    </div>
+                    <div class="classroom tu3 th2 th3 tu5 tu6 tu7 th5 th6 f3 tu3 w3 m6 w6 m5 w4 f5 f4 tu5 m3 f3 ">
+                        H-265
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <h5 aria-controls="h-2f-map" aria-expanded="false" class="tw-p-1 tw-px-4 tw-text-base tw-m-1 tw-mr-2 tw-w-fit tw-mt-4 tw-text-white tw-bg-black tw-border tw-border-black" data-bs-toggle="collapse" href="#h-2f-map" role="button">Quick Map ▼</h5>
+                    <div class="collapse" id="h-2f-map"><img alt="本館二階" class="p-2" src="images/honkan2F.png"></div>
+                    <a href="https://icumap.com/map/honkan" class="tw-p-1 tw-px-4 tw-m-1 tw-mr-4 tw-w-fit tw-text-base tw-mt-1 tw-text-white tw-bg-black tw-border tw-border-black">ICUmap.com</a>
+                </div>
+            </div>
+            <div class="container border p-3 my-2">
+                <div class="h2">
+                    Honkan 3F & 4F
+                </div>
+                <div class="grid-3F">
+                    <div class="classroom w5 w6 w7 m1 w1 f1 th2 th3 th5 th6 th7 m3 w3 tu3 f5 m6 f3 f6 m5 tu5 w5 w4 m3 w3 f3 ">
+                        H-301
+                    </div>
+                    <div class="classroom th6 th7 th2 th3 m3 w3 m5 m6 tu2 f6 w5 tu3 f3 f5 f2 w5 tu4 w3 f3 ">
+                        H-302
+                    </div>
+                    <div class="classroom tu5 tu6 tu7 th5 th6 th7 w5 w6 m5 m6 m7 tu3 th2 th3 w5 w6 w7 m4 w4 f4 m3 w3 f3 m2 w2 f2 ">
+                        H-303
+                    </div>
+                    <div class="classroom f5 f6 th1 th<62 m or 67 w>7 m2 w2 f2 f5 f6 th1 th<62 m or 67 w>7 m3 w3 f3 ">
+                        H-304
+                    </div>
+                    <div class="classroom th5 th6 tu3 th2 th3 f5 tu3 f6 w3 w2 m6 tu5 m3 m5 w5 f3 w6 m3 w3 f3 ">
+                        H-307
+                    </div>
+                    <div class="classroom th5 th6 m5 m6 tu3 w5 f2 m3 w2 w6 w3 f3 f4 f5 m3 tu4 w3 f3 ">
+                        H-309
+                    </div>
+                    <div class="classroom m5 m6 w5 w6 f5 f6 th2 th3 m2 w2 f2 th5 th6 th7 m5 m6 w5 w6 f5 f6 tu3 th2 th3 tu1 tu2 th1 f3 ">
+                        H-314
+                    </div>
+                    <div class="classroom m3 w3 f3 tu4 tul4 th4 thl4 tu1 tu2 th1 th2 th3 w5 w6 w7 m3 w3 f3 m5 m6 m7 w5 w6 w7 f5 f6 f7 ">
+                        H-315
+                    </div>
+                    <div class="classroom th2 th3 m3 w3 f3 w5 w6 w7 m5 m6 m7 f5 f6 f7 m2 w2 w5 w6 w7 tu3 th2 th3 f5 f6 f7 tu4 tul4 th4 thl4 ">
+                        H-316
+                    </div>
+                    <div class="classroom m2 w2 m3 w3 f3 m5 m6 m7 tu1 tu2 th2 th3 f4 f5 f6 m5 m6 f2 f3 ">
+                        H-351
+                    </div>
+                    <div class="classroom tu4 tul4 th4 thl4 m5 m6 tu3 th2 th3 tu1 tu2 m2 w2 f2 m3 w3 f3 tu3 th2 th3 w5 w6 w7 m5 m6 ">
+                        H-352
+                    </div>
+                    <div class="classroom tu2 th5 th6 m3 w6 w5 f5 tu5 m5 f6 w3 f3 m6 f2 ">
+                        H-353
+                    </div>
+                    <div class="classroom tu1 tu2 f5 f3 m6 m3 f6 w3 m5 w4 w5 tu4 ">
+                        H-355
+                    </div>
+                    <div class="classroom th1 th2 f6 f7 w5 w6 w7 tu2 tu3 m3 f5 w6 m6 m5 w5 f3 w3 tu4 ">
+                        H-356
+                    </div>
+                    <div class="classroom w6 f5 m5 f3 w5 tu5 w3 m3 m6 ">
+                        H-357
+                    </div>
+                    <div class="classroom w5 w6 w7 f5 f6 f7 tu4 tul4 th4 thl4 tu1 tu2 tu5 tu6 tu7 tu3 th2 th3 f2 f3 w1 w2 m5 m6 w5 w6 f5 f6 tu2 f2 w1 w2 m2 m3 ">
+                        H-359
+                    </div>
+                    <div class="classroom m4 m5 w5 w6 w7 f5 f6 f7 m2 w2 f2 ">
+                        H-361
+                    </div>
+                    <div class="classroom m4 w4 f4 m5 m6 m3 w3 f3 tu4 tul4 th4 thl4 tu3 th2 th3 tu1 tu2 w5 w6 w7 w5 w6 m3 w3 f3 m2 w2 f2 ">
+                        H-364
+                    </div>
+                    <div class="classroom w5 w6 f5 f6 f7 m3 w3 f3 tu3 th2 th3 tu1 tu2 th5 th6 th7 ">
+                        H-367
+                    </div>
+                    <div class="classroom tu1 tu2 tu3 th1 th2 th3 tu5 tu6 tu7 th5 th6 th7 w5 w6 w7 tu2 tu3 f5 w6 w5 m6 f3 f6 tu5 w3 m5 m3 ">
+                        H-369
+                    </div>
+                    <div class="classroom m3 w3 f3 m5 m6 m7 w5 w6 w7 tu4 tul4 th4 thl4 m4 w4 f4 th5 th6 tu4 tul4 th4 thl4 m3 w3 f3 m2 w2 f2 tu3 th2 th3 m5 m6 m7 ">
+                        H-402
+                    </div>
+                    <div class="classroom w5 w6 m5 f5 m3 w3 f3 w5 ">
+                        H-404
+                    </div>
+                    <div class="classroom tu5 tu6 tu7 th5 th6 th7 w5 w6 w7 m5 m6 m7 m3 m5 f3 w3 f5 w4 ">
+                        H-405
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <h5 aria-controls="h-3f-map" aria-expanded="false" class="tw-p-1 tw-px-4 tw-text-base tw-m-1 tw-mr-2 tw-w-fit tw-mt-4 tw-text-white tw-bg-black tw-border tw-border-black" data-bs-toggle="collapse" href="#h-3f-map" role="button">Quick Map ▼</h5>
+                    <div class="collapse" id="h-3f-map"><img alt="本館3階" class=" p-2" src="images/honkan3F.png"></div>
+                    <div class="collapse" id="h-3f-map"><img alt="本館4階" class=" p-2" src="images/honkan4F.png"></div>
+                    <a href="https://icumap.com/map/honkan" class="tw-p-1 tw-px-4 tw-m-1 tw-mr-4 tw-w-fit tw-text-base tw-mt-1 tw-text-white tw-bg-black tw-border tw-border-black">ICUmap.com</a>
+                </div>
+            </div>
+            <div class="container border p-3 my-2">
+                <div class="h2">
+                    ILC
+                </div>
+                <div class="grid-4F">
+                    <div class="classroom sa1 sa2 sa3 w5 w6 w7 sa1 sa2 sa3 w5 w6 w7 ">
+                        I-101
+                    </div>
+                    <div class="classroom th5 th6 th7 tu1 tu2 ">
+                        I-102
+                    </div>
+                    <div class="classroom m5 m6 m7 w5 w6 w7 th5 th6 th7 w5 w6 w7 tu5 tu6 tu7 th5 th6 th7 w5 w6 w7 m6 m7 th5 th6 th7 w5 w6 w7 ">
+                        I-103
+                    </div>
+                    <div class="classroom m5 m6 m7 w5 w6 w7 tu1 tu2 tu3 th1 th2 th3 tu5 tu6 tu7 th5 th6 th7 m5 m6 m7 f5 f6 f7 tu1 tu2 tu3 th1 th2 th3 tu5 tu6 tu7 th5 th6 th7 m5 m6 m7 f5 f6 f7 th5 th6 th7 ">
+                        I-104
+                    </div>
+                    <div class="classroom th5 th6 th7 f1 f2 w5 w6 w7 tu4 tul4 th4 thl4 w5 w6 w7 f5 f6 f7 m5 m6 m7 th4 th5 th6 th7 tu3 th2 th3 th5 th6 th7 m6 m7 ">
+                        I-106
+                    </div>
+                    <div class="classroom m1 m2 w1 w2 f1 f2 w4 w5 ">
+                        I-131
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 w5 w6 ">
+                        I-132
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 w5 w6 w7 w8 m5 m6 f4 ">
+                        I-161
+                    </div>
+                    <div class="classroom m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 ">
+                        I-162
+                    </div>
+                    <div class="classroom th2 th3 m1 m2 tu1 tu2 w1 w2 w3 f1 f2 f3 ">
+                        I-163
+                    </div>
+                    <div class="classroom m4 w4 f4 m1 w1 f1 m3 w3 m5 m6 m7 f5 f6 f7 w5 w6 tu1 tu2 th1 tu3 th2 th3 m5 m6 m7 w4 w5 w5 w6 w7 th5 th6 th7 m5 m6 m7 ">
+                        I-206
+                    </div>
+                    <div class="classroom w4 w5 th5 th6 th7 m4 m5 f4 f5 ">
+                        I-209
+                    </div>
+                    <div class="classroom m5 m6 w5 w6 w7 tu2 tu3 th6 th7 w4 w5 w6 m5 m6 m7 tu1 tu2 tu3 f2 f3 m5 m6 m7 th2 th3 f4 f5 f6 m4 w4 ">
+                        I-212
+                    </div>
+                    <div class="classroom m1 m2 w1 w2 f1 f2 m1 m2 w1 w2 f1 f2 ">
+                        I-231
+                    </div>
+                    <div class="classroom m1 m2 w1 w2 f1 f2 m1 m2 w1 w2 f1 f2 ">
+                        I-232
+                    </div>
+                    <div class="classroom m3 w3 f3 ">
+                        N-220
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <h5 aria-controls="ILC-map" aria-expanded="false" class="tw-p-1 tw-px-4 tw-text-base tw-m-1 tw-mr-2 tw-w-fit tw-mt-4 tw-text-white tw-bg-black tw-border tw-border-black" data-bs-toggle="collapse" href="#ILC-map" role="button">Quick Map ▼</h5>
+                    <div class="collapse" id="ILC-map">
+                        <div class="p-2">以下旧データ</div>
+                    </div>
+                    <div class="collapse" id="ILC-map"><img alt="ILC" class="p-2" src="images/ilc1F.png"></div>
+                    <div class="collapse" id="ILC-map"><img alt="ILC" class="p-2" src="images/ilc2F.png"></div>
+                    <!-- <a href="https://icumap.com/map/ilc" class="tw-p-1 tw-px-4 tw-m-1 tw-mr-4 tw-w-fit tw-text-base tw-mt-1 tw-text-white tw-bg-icu tw-border tw-border-black">ICUmap.com</a> -->
+                </div>
+            </div>
+            <div class="container border p-3 my-2">
+                <div class="h2">
+                    Troy
+                </div>
+                <div class="grid-T">
+                    <div class="classroom tu2 th2 sa6 sa7 th5 th6 th7 m5 m6 m1 m2 f2 f3 sa4 sa5 th4 th5 th2 th3 m5 m6 m7 w5 w6 f5 f6 w1 w2 sa6 sa7 sa1 sa2 ">
+                        T-112
+                    </div>
+                    <div class="classroom tu3 th3 m5 m6 m7 th5 th6 th7 m3 w3 f3 sa6 sa7 sa2 sa3 tu1 tu2 th1 th2 w5 w6 m1 w1 sa2 sa3 tu3 th3 w5 w6 w7 m5 m6 m7 f5 f6 f7 m2 w2 f2 sa6 sa7 tu1 tu2 m1 w1 m4 w4 ">
+                        T-113
+                    </div>
+                    <div class="classroom m4 m5 m6 m7 th4 th5 th6 th7 w4 w5 w6 w7 ">
+                        T-125
+                    </div>
+                    <div class="classroom th4 th5 th6 th7 ">
+                        T-126
+                    </div>
+                    <div class="classroom th5 th6 th7 m5 m6 m7 th4 th5 th6 th7 ">
+                        T-165
+                    </div>
+                    <div class="classroom m3 w3 f3 w5 w6 w7 m5 m6 m7 tu3 th2 th3 m4 w4 f4 m5 m6 m7 tu3 th2 th3 m3 w3 f3 tu5 tu6 tu7 w5 w6 w7 ">
+                        T-171
+                    </div>
+                    <div class="classroom m2 w2 f2 m3 w3 f3 w5 w6 w7 tu1 tu2 th1 tu5 tu6 tu3 th2 th3 tu3 th2 th3 m3 w3 f3 tu5 tu6 tu7 tu4 tul4 th4 thl4 tu1 tu2 tu1 tu2 ">
+                        T-229
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-236
+                    </div>
+                    <div class="classroom sa6 sa7 sa6 sa7 ">
+                        T-237
+                    </div>
+                    <div class="classroom sa6 sa7 sa6 sa7 ">
+                        T-238
+                    </div>
+                    <div class="classroom sa6 sa7 sa6 sa7 ">
+                        T-240
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-242
+                    </div>
+                    <div class="classroom sa6 sa7 tu5 tu6 th5 th6 tu1 tu2 sa2 sa3 sa6 sa7 m5 m6 m1 m2 ">
+                        T-249
+                    </div>
+                    <div class="classroom w5 w6 sa6 sa7 sa2 sa3 th4 th5 w5 w6 w7 sa2 sa3 th4 th5 ">
+                        T-250
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-251
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-253
+                    </div>
+                    <div class="classroom sa2 sa3 sa6 sa7 ">
+                        T-255
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-259
+                    </div>
+                    <div class="classroom m3 w3 f3 m5 m6 m7 w5 w6 w7 m2 w2 f2 tu3 th2 th3 m3 w3 tu3 th3 ">
+                        T-270
+                    </div>
+                    <div class="classroom sa5 sa6 ">
+                        T-325
+                    </div>
+                    <div class="classroom m3 w3 f3 m3 w3 f3 ">
+                        T-328
+                    </div>
+                    <div class="classroom sa5 sa6 sa5 sa6 ">
+                        T-334
+                    </div>
+                    <div class="classroom sa5 sa6 ">
+                        T-335
+                    </div>
+                    <div class="classroom sa6 sa7 sa5 sa6 ">
+                        T-336
+                    </div>
+                    <div class="classroom sa6 sa7 sa5 sa6 ">
+                        T-337
+                    </div>
+                    <div class="classroom th1 th2 sa6 sa7 m4 w4 f2 f3 th6 th7 w2 w3 m2 m3 sa2 sa3 ">
+                        T-342
+                    </div>
+                    <div class="classroom w5 w6 m2 w2 f2 m3 w3 sa2 sa3 m4 w4 f4 ">
+                        T-343
+                    </div>
+                    <div class="classroom sa6 sa7 ">
+                        T-349
+                    </div>
+                    <div class="classroom sa6 sa7 sa5 sa6 ">
+                        T-350
+                    </div>
+                    <div class="classroom sa6 sa7 sa6 sa7 ">
+                        T-352
+                    </div>
+                    <div class="classroom m3 w3 f3 m2 w2 tu3 f3 ">
+                        T-364
+                    </div>
+                    <div class="classroom f4 f5 f6 f7 tu3 th2 th3 w4 w5 w6 w7 th4 th5 th6 th7 ">
+                        T-406
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <a href="https://icumap.com/map/troy" class="tw-p-1 tw-px-4 tw-m-1 tw-mr-4 tw-w-fit tw-text-base tw-mt-1 tw-text-white tw-bg-black tw-border tw-border-black">ICUmap.com</a>
+                </div>
+            </div>
+            <div class="tw-container">
+                <div class="h3 tw-ml-4">Updated for 2023A (2023.10.2)</div>
+                <div class="tw-ml-4">教務が空き教室情報の開示を終了したためシラバスから逆算したデータをもとに作成しています。シラバスで表示されいていた教室から変更があった際など現在の空き教室とずれがある可能性があります。また、使用されていない時限でも教室が開放されているとは限らないです。</div>
+                <div class="tw-ml-4 tw-mt-2">- フィードバック、質問などありましたらTwitterでDMをお願いします(<a href="https://twitter.com/pentacoxian" class="tw-underline">@PENTACoXIAN</a>)
+                </div>
+                <div class="tw-ml-4 tw-mt-2">- このページのソースコードは<a href="https://github.com/pentaCoxian/icu-akibeya" class="tw-underline">こちら</a></div>
+            </div>
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
@@ -358,49 +520,62 @@
             itemSelector: '.classroom',
             layoutMode: 'fitRows'
         });
+        var $gridT = $('.grid-T').isotope({
+            itemSelector: '.classroom',
+            layoutMode: 'fitRows'
+        });
         // store filter for each group
         var filters = [];
 
         $('.filters').on('click', '.filter', function(event) {
             var $this = $(this);
             var $target = $(event.currentTarget);
-            // change btn-success class
+            // Change btn-success class
             $target.toggleClass('btn-success');
             $target.toggleClass('btn-light');
             var isChecked = $target.hasClass('btn-success');
             var filter = $target.attr('data-filter');
+
             if (isChecked) {
                 addFilter(filter);
             } else {
                 removeFilter(filter);
             }
-            // set filter for Isotope
+
+            // Create an inverse filter
+            var inverseFilters = filters.map(function(item) {
+                return ':not(' + item + ')';
+            });
+
+            // Set filter for Isotope using the inverse filter
             $grid1F.isotope({
-                filter: filters.join('')
+                filter: inverseFilters.join('') // Use inverse filter here
             });
             $grid2F.isotope({
-                filter: filters.join('')
+                filter: inverseFilters.join('') // Use inverse filter here
             });
             $grid3F.isotope({
-                filter: filters.join('')
+                filter: inverseFilters.join('') // Use inverse filter here
             });
             $grid4F.isotope({
-                filter: filters.join('')
+                filter: inverseFilters.join('') // Use inverse filter here
+            });
+            $gridT.isotope({
+                filter: inverseFilters.join('') // Use inverse filter here
             });
         });
 
         function addFilter(filter) {
-            if (filters.indexOf(filter) == -1) {
-                filters.push(filter);
-            }
+            filters.push(filter);
         }
 
         function removeFilter(filter) {
             var index = filters.indexOf(filter);
-            if (index != -1) {
+            if (index !== -1) {
                 filters.splice(index, 1);
             }
         }
+
 
         $(".isotope-reset").click(function() {
             $grid1F.isotope({
@@ -413,6 +588,9 @@
                 filter: '*'
             });
             $grid4F.isotope({
+                filter: '*'
+            });
+            $gridT.isotope({
                 filter: '*'
             });
             $(".filter").each(function() {
